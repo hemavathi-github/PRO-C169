@@ -6,10 +6,7 @@ AFRAME.registerComponent("markerhandler", {
       this.handleMarkerFound();
     });
 
-    this.el.addEventListener("markerLost", () => {
-      console.log("marker is lost")
-      this.handleMarkerLost();
-    });
+    //add marker lost event handler
   },
   handleMarkerFound: function () {
     // Changing button div visibility
@@ -28,13 +25,7 @@ AFRAME.registerComponent("markerhandler", {
       });
     });
 
-    orderButtton.addEventListener("click", () => {
-      swal({
-        icon: "https://i.imgur.com/4NZ6uLY.jpg",
-        title: "Thanks For Order!",
-        text: "Your order will be served soon at your table!"
-      });
-    });
+    //handle click events for order button
   },
 
   handleMarkerLost: function () {
